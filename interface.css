@@ -1,0 +1,169 @@
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.hidden{
+    display: none;
+    opacity: 0;
+}
+
+.prototype{
+    display: none!important;
+}
+
+.main{
+    max-width: 1280px;
+    margin: auto;
+    margin-bottom: 160px;
+}
+
+.main h1{
+    font-size: 24px;
+    text-align: center;
+}
+
+.text{
+    border: 1px solid #595959;
+    margin: 15px 0px;
+    padding: 5px;
+    text-align: center;
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.backend-response > div{
+    
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+    max-width: 450px;
+    margin: auto;
+}
+
+.backend-response > .success{
+    background: #b3e1b3;
+}
+
+.backend-response > .error{
+    background: #e1b3b3;
+}
+
+.main .get-users{
+    margin-top: 80px;
+}
+
+.main .get-users .user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #9e9595;
+    padding: 5px;
+    border-radius: 6px;
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+
+.main .get-users .user .avatar{
+    flex:0 1 200px;
+    text-align:center;
+}
+
+.main .get-users .user .avatar img{
+    border: 3px solid #b9a4a4;
+    border-radius: 50%;
+}
+
+.main .get-users .user .personal-infos {
+    flex: 1 1 calc( 100% - 200px );
+}
+
+.main .get-users .user .personal-infos > div{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    text-align: center;
+}
+
+/* .main .get-users .user .general > div{
+    flex: 1 1 25%; 
+} */
+
+.main .get-users .user .general > .name{
+    flex: 1 0 100%;
+}
+
+.main .get-users .user .general > .age{
+    flex: 1 1 2ch;
+}
+.main .get-users .user .general > .gender{
+    flex: 1 1 6ch;
+}
+.main .get-users .user .general > .email{
+    flex: 1 0 100%;
+    font-size: 12px;
+}
+
+.main .get-users .user .living{
+    margin-top: 20px;
+}
+
+.main .get-users .user .living > div{
+    flex: 1 1 100%;
+}
+
+.main .button.api-call{
+    display: inline-block;
+    border: 2px solid #555;
+    padding: 10px;
+    margin: 15px 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3ss ease-out;
+    text-align: center;
+    box-shadow: 2px 3px 1px #0000002e;
+    user-select: none;
+}
+
+.main .button.api-call:hover{
+    padding: 15px;
+}
+.main .button.api-call:active{
+    box-shadow: inset 0px 0px 1px 3px #0000002e;
+}
+
+.footer .personal-data-row{
+    text-align: center;
+    display: flex;
+}
+
+.footer .personal-data-row > div{
+    flex: 1 1 50%;
+    margin: 17px 0px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ccc;
+}
+
+@media ( min-width: 1280px ) {
+
+    .main .get-users .user {
+        display: inline-flex;
+        width: calc( 50% - 60px ); 
+        max-width: 100%;
+        margin: 15px;
+        text-align: center;
+    }
+
+}
