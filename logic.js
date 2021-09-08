@@ -118,7 +118,7 @@ var uploadToDataBase = function( data ){
     
     /*itt lehet szabályozni, hágy embert viszek fel. Ha éles API-ról kapnék több személyt természetesen más lenne a megoldás, de a feladatot így tudtam  legjobb tudásom szerint megoldani. */
 
-    for( var  i = 0; i < 1; i++ ){
+    for( var  i = 0; i < 10; i++ ){
 
         dataToBackend.push( data.slice() );
 
@@ -169,19 +169,29 @@ getUsers = function(){
 
         response = response.json();
 
+        $( ".get-users .backend-response .error" ).toggleClass( "hidden" , !!response );
+
         drawUsers( response );
+        
+        return !!response;
 
     } )
 
 }
 
 drawUsers = function( users ){
-
+    
     var usersContainer = $( ".get-users .users" );
+    
+    usersContainer.find( ".user" ).remove();
+    
+    if( users.length === 0 ){
+        
+        return false;
+        
+    }
 
     var userPrototype = $( ".user.prototype" );
-
-    usersContainer.remove( ".user" );
 
     for( var i = 0; i < users.length; i++ ){
 

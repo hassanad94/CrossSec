@@ -7,7 +7,7 @@
        $users = run( "SELECT * FROM test.users" );
 
 
-       return $users;
+       return empty( $users ) ? false : $users;
 
     }
 
