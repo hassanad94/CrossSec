@@ -1,7 +1,7 @@
 # CrossSec
 Sziasztok.
 
-Telepítés: Localhost-t teszteltem és ott kiválóan fút. Ha fut a xampp-n az apach és a mysql akkor gond nem lehet.
+Telepítés: Localhost-t teszteltem és ott kiválóan fút. Ha fut a xampp-n az apach és a mysql akkor gond nem lehet.( Elvileg :D )
 
 2 gombot találhattok majd a felületen. Az egyikkel lekéri az adatokat a megadott helyről. Az volt írva, hogy 10 usernél is müködjék a felület. Ezt megoldottam, bár kicsit hack szagú a dolog a 10 emberes json-vel kapcsolatban. Írtam a kódomba kommenteket, ahol úgy éreztem, hogy érdemes kiegészítenem a gondolataim. Lehet több helyre is kellett volna...
 
