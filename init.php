@@ -79,4 +79,36 @@
 
 	}
 
+	/*Csak hogy ne keljen kézzel létre hozni. Erre nem találtam sajnos szebb megoldást.*/
+
+	function setUpDatabase(){
+
+		$dbname = "test";
+		$pdo = new PDO("mysql:host=localhost", "root", "");
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$dbname = "`".str_replace("`","``",$dbname)."`";
+		$pdo->query("CREATE DATABASE IF NOT EXISTS $dbname");
+		$pdo->query("use $dbname");
+
+		run( "CREATE TABLE IF NOT EXISTS `users` (
+			`id` int(11) NOT NULL AUTO_INCREMENT,
+			`name` varchar(50) NOT NULL DEFAULT '0',
+			`gender` varchar(10) NOT NULL DEFAULT '0',
+			`age` tinyint(4) NOT NULL DEFAULT '0',
+			`email` varchar(50) NOT NULL DEFAULT '0',
+			`city` varchar(25) NOT NULL DEFAULT '0',
+			`country` varchar(25) NOT NULL DEFAULT '0',
+			`salt` varchar(25) NOT NULL DEFAULT '0',
+			`password` char(64) NOT NULL DEFAULT '0',
+			`picture` varchar(100) NOT NULL DEFAULT '0',
+			PRIMARY KEY (`id`)
+		  ) ENGINE=InnoDB AUTO_INCREMENT=80 DEFAULT CHARSET=latin1;
+		  " );
+
+	}
+
+	setUpDatabase();
+
+
 ?>
